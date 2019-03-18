@@ -1,0 +1,968 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+
+<!DOCTYPE html><html class=''>
+<head><script src='//production-assets.codepen.io/assets/editor/live/console_runner-079c09a0e3b9ff743e39ee2d5637b9216b3545af0de366d4b9aad9dc87e26bfd.js'></script><script src='//production-assets.codepen.io/assets/editor/live/events_runner-73716630c22bbc8cff4bd0f07b135f00a0bdc5d14629260c3ec49e5606f98fdd.js'></script><script src='//production-assets.codepen.io/assets/editor/live/css_live_reload_init-2c0dc5167d60a5af3ee189d570b1835129687ea2a61bee3513dee3a50c115a77.js'></script><meta charset='UTF-8'><meta name="robots" content="noindex"><link rel="shortcut icon" type="image/x-icon" href="//production-assets.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" /><link rel="mask-icon" type="" href="//production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" /><link rel="canonical" href="https://codepen.io/emilcarlsson/pen/ZOQZaV?limit=all&page=74&q=contact+" />
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,300' rel='stylesheet' type='text/css'>
+
+<script src="https://use.typekit.net/hoy3lrg.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css'><link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css'>
+<style class="cp-pen-styles">body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #27ae60;
+  font-family: "proxima-nova", "Source Sans Pro", sans-serif;
+  font-size: 1em;
+  letter-spacing: 0.1px;
+  color: #32465a;
+  text-rendering: optimizeLegibility;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+  -webkit-font-smoothing: antialiased;
+}
+
+#frame {
+  width: 95%;
+  min-width: 360px;
+  max-width: 1000px;
+  height: 92vh;
+  min-height: 300px;
+  max-height: 720px;
+  background: #E6EAEA;
+}
+@media screen and (max-width: 360px) {
+  #frame {
+    width: 100%;
+    height: 100vh;
+  }
+}
+#frame #sidepanel {
+  float: left;
+  min-width: 280px;
+  max-width: 340px;
+  width: 40%;
+  height: 100%;
+  background: #2c3e50;
+  color: #f5f5f5;
+  overflow: hidden;
+  position: relative;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel {
+    width: 58px;
+    min-width: 58px;
+  }
+}
+#frame #sidepanel #profile {
+  width: 80%;
+  margin: 25px auto;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #profile {
+    width: 100%;
+    margin: 0 auto;
+    padding: 5px 0 0 0;
+    background: #32465a;
+  }
+}
+#frame #sidepanel #profile.expanded .wrap {
+  height: 210px;
+  line-height: initial;
+}
+#frame #sidepanel #profile.expanded .wrap p {
+  margin-top: 20px;
+}
+#frame #sidepanel #profile.expanded .wrap i.expand-button {
+  -moz-transform: scaleY(-1);
+  -o-transform: scaleY(-1);
+  -webkit-transform: scaleY(-1);
+  transform: scaleY(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+#frame #sidepanel #profile .wrap {
+  height: 60px;
+  line-height: 60px;
+  overflow: hidden;
+  -moz-transition: 0.3s height ease;
+  -o-transition: 0.3s height ease;
+  -webkit-transition: 0.3s height ease;
+  transition: 0.3s height ease;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #profile .wrap {
+    height: 55px;
+  }
+}
+#frame #sidepanel #profile .wrap img {
+  width: 50px;
+  border-radius: 50%;
+  padding: 3px;
+  border: 2px solid #e74c3c;
+  height: auto;
+  float: left;
+  cursor: pointer;
+  -moz-transition: 0.3s border ease;
+  -o-transition: 0.3s border ease;
+  -webkit-transition: 0.3s border ease;
+  transition: 0.3s border ease;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #profile .wrap img {
+    width: 40px;
+    margin-left: 4px;
+  }
+}
+#frame #sidepanel #profile .wrap img.online {
+  border: 2px solid #2ecc71;
+}
+#frame #sidepanel #profile .wrap img.away {
+  border: 2px solid #f1c40f;
+}
+#frame #sidepanel #profile .wrap img.busy {
+  border: 2px solid #e74c3c;
+}
+#frame #sidepanel #profile .wrap img.offline {
+  border: 2px solid #95a5a6;
+}
+#frame #sidepanel #profile .wrap p {
+  float: left;
+  margin-left: 15px;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #profile .wrap p {
+    display: none;
+  }
+}
+#frame #sidepanel #profile .wrap i.expand-button {
+  float: right;
+  margin-top: 23px;
+  font-size: 0.8em;
+  cursor: pointer;
+  color: #435f7a;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #profile .wrap i.expand-button {
+    display: none;
+  }
+}
+#frame #sidepanel #profile .wrap #status-options {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  width: 150px;
+  margin: 70px 0 0 0;
+  border-radius: 6px;
+  z-index: 99;
+  line-height: initial;
+  background: #435f7a;
+  -moz-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #profile .wrap #status-options {
+    width: 58px;
+    margin-top: 57px;
+  }
+}
+#frame #sidepanel #profile .wrap #status-options.active {
+  opacity: 1;
+  visibility: visible;
+  margin: 75px 0 0 0;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #profile .wrap #status-options.active {
+    margin-top: 62px;
+  }
+}
+#frame #sidepanel #profile .wrap #status-options:before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 8px solid #435f7a;
+  margin: -8px 0 0 24px;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #profile .wrap #status-options:before {
+    margin-left: 23px;
+  }
+}
+#frame #sidepanel #profile .wrap #status-options ul {
+  overflow: hidden;
+  border-radius: 6px;
+}
+#frame #sidepanel #profile .wrap #status-options ul li {
+  padding: 15px 0 30px 18px;
+  display: block;
+  cursor: pointer;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #profile .wrap #status-options ul li {
+    padding: 15px 0 35px 22px;
+  }
+}
+#frame #sidepanel #profile .wrap #status-options ul li:hover {
+  background: #496886;
+}
+#frame #sidepanel #profile .wrap #status-options ul li span.status-circle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 5px 0 0 0;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #profile .wrap #status-options ul li span.status-circle {
+    width: 14px;
+    height: 14px;
+  }
+}
+#frame #sidepanel #profile .wrap #status-options ul li span.status-circle:before {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  margin: -3px 0 0 -3px;
+  background: transparent;
+  border-radius: 50%;
+  z-index: 0;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #profile .wrap #status-options ul li span.status-circle:before {
+    height: 18px;
+    width: 18px;
+  }
+}
+#frame #sidepanel #profile .wrap #status-options ul li p {
+  padding-left: 12px;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #profile .wrap #status-options ul li p {
+    display: none;
+  }
+}
+#frame #sidepanel #profile .wrap #status-options ul li#status-online span.status-circle {
+  background: #2ecc71;
+}
+#frame #sidepanel #profile .wrap #status-options ul li#status-online.active span.status-circle:before {
+  border: 1px solid #2ecc71;
+}
+#frame #sidepanel #profile .wrap #status-options ul li#status-away span.status-circle {
+  background: #f1c40f;
+}
+#frame #sidepanel #profile .wrap #status-options ul li#status-away.active span.status-circle:before {
+  border: 1px solid #f1c40f;
+}
+#frame #sidepanel #profile .wrap #status-options ul li#status-busy span.status-circle {
+  background: #e74c3c;
+}
+#frame #sidepanel #profile .wrap #status-options ul li#status-busy.active span.status-circle:before {
+  border: 1px solid #e74c3c;
+}
+#frame #sidepanel #profile .wrap #status-options ul li#status-offline span.status-circle {
+  background: #95a5a6;
+}
+#frame #sidepanel #profile .wrap #status-options ul li#status-offline.active span.status-circle:before {
+  border: 1px solid #95a5a6;
+}
+#frame #sidepanel #profile .wrap #expanded {
+  padding: 100px 0 0 0;
+  display: block;
+  line-height: initial !important;
+}
+#frame #sidepanel #profile .wrap #expanded label {
+  float: left;
+  clear: both;
+  margin: 0 8px 5px 0;
+  padding: 5px 0;
+}
+#frame #sidepanel #profile .wrap #expanded input {
+  border: none;
+  margin-bottom: 6px;
+  background: #32465a;
+  border-radius: 3px;
+  color: #f5f5f5;
+  padding: 7px;
+  width: calc(100% - 43px);
+}
+#frame #sidepanel #profile .wrap #expanded input:focus {
+  outline: none;
+  background: #435f7a;
+}
+#frame #sidepanel #search {
+  border-top: 1px solid #32465a;
+  border-bottom: 1px solid #32465a;
+  font-weight: 300;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #search {
+    display: none;
+  }
+}
+#frame #sidepanel #search label {
+  position: absolute;
+  margin: 10px 0 0 20px;
+}
+#frame #sidepanel #search input {
+  font-family: "proxima-nova",  "Source Sans Pro", sans-serif;
+  padding: 10px 0 10px 46px;
+  width: calc(100% - 25px);
+  border: none;
+  background: #32465a;
+  color: #f5f5f5;
+}
+#frame #sidepanel #search input:focus {
+  outline: none;
+  background: #435f7a;
+}
+#frame #sidepanel #search input::-webkit-input-placeholder {
+  color: #f5f5f5;
+}
+#frame #sidepanel #search input::-moz-placeholder {
+  color: #f5f5f5;
+}
+#frame #sidepanel #search input:-ms-input-placeholder {
+  color: #f5f5f5;
+}
+#frame #sidepanel #search input:-moz-placeholder {
+  color: #f5f5f5;
+}
+#frame #sidepanel #contacts {
+  height: calc(100% - 177px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #contacts {
+    height: calc(100% - 149px);
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  #frame #sidepanel #contacts::-webkit-scrollbar {
+    display: none;
+  }
+}
+#frame #sidepanel #contacts.expanded {
+  height: calc(100% - 334px);
+}
+#frame #sidepanel #contacts::-webkit-scrollbar {
+  width: 8px;
+  background: #2c3e50;
+}
+#frame #sidepanel #contacts::-webkit-scrollbar-thumb {
+  background-color: #243140;
+}
+#frame #sidepanel #contacts ul li.contact {
+  position: relative;
+  padding: 10px 0 15px 0;
+  font-size: 0.9em;
+  cursor: pointer;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #contacts ul li.contact {
+    padding: 6px 0 46px 8px;
+  }
+}
+#frame #sidepanel #contacts ul li.contact:hover {
+  background: #32465a;
+}
+#frame #sidepanel #contacts ul li.contact.active {
+  background: #32465a;
+  border-right: 5px solid #435f7a;
+}
+#frame #sidepanel #contacts ul li.contact.active span.contact-status {
+  border: 2px solid #32465a !important;
+}
+#frame #sidepanel #contacts ul li.contact .wrap {
+  width: 88%;
+  margin: 0 auto;
+  position: relative;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #contacts ul li.contact .wrap {
+    width: 100%;
+  }
+}
+#frame #sidepanel #contacts ul li.contact .wrap span {
+  position: absolute;
+  left: 0;
+  margin: -2px 0 0 -2px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid #2c3e50;
+  background: #95a5a6;
+}
+#frame #sidepanel #contacts ul li.contact .wrap span.online {
+  background: #2ecc71;
+}
+#frame #sidepanel #contacts ul li.contact .wrap span.away {
+  background: #f1c40f;
+}
+#frame #sidepanel #contacts ul li.contact .wrap span.busy {
+  background: #e74c3c;
+}
+#frame #sidepanel #contacts ul li.contact .wrap img {
+  width: 40px;
+  border-radius: 50%;
+  float: left;
+  margin-right: 10px;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #contacts ul li.contact .wrap img {
+    margin-right: 0px;
+  }
+}
+#frame #sidepanel #contacts ul li.contact .wrap .meta {
+  padding: 5px 0 0 0;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #contacts ul li.contact .wrap .meta {
+    display: none;
+  }
+}
+#frame #sidepanel #contacts ul li.contact .wrap .meta .name {
+  font-weight: 600;
+}
+#frame #sidepanel #contacts ul li.contact .wrap .meta .preview {
+  margin: 5px 0 0 0;
+  padding: 0 0 1px;
+  font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -moz-transition: 1s all ease;
+  -o-transition: 1s all ease;
+  -webkit-transition: 1s all ease;
+  transition: 1s all ease;
+}
+#frame #sidepanel #contacts ul li.contact .wrap .meta .preview span {
+  position: initial;
+  border-radius: initial;
+  background: none;
+  border: none;
+  padding: 0 2px 0 0;
+  margin: 0 0 0 1px;
+  opacity: .5;
+}
+#frame #sidepanel #bottom-bar {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+#frame #sidepanel #bottom-bar button {
+  float: left;
+  border: none;
+  width: 50%;
+  padding: 10px 0;
+  background: #32465a;
+  color: #f5f5f5;
+  cursor: pointer;
+  font-size: 0.85em;
+  font-family: "proxima-nova",  "Source Sans Pro", sans-serif;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #bottom-bar button {
+    float: none;
+    width: 100%;
+    padding: 15px 0;
+  }
+}
+#frame #sidepanel #bottom-bar button:focus {
+  outline: none;
+}
+#frame #sidepanel #bottom-bar button:nth-child(1) {
+  border-right: 1px solid #2c3e50;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #bottom-bar button:nth-child(1) {
+    border-right: none;
+    border-bottom: 1px solid #2c3e50;
+  }
+}
+#frame #sidepanel #bottom-bar button:hover {
+  background: #435f7a;
+}
+#frame #sidepanel #bottom-bar button i {
+  margin-right: 3px;
+  font-size: 1em;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #bottom-bar button i {
+    font-size: 1.3em;
+  }
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #bottom-bar button span {
+    display: none;
+  }
+}
+#frame .content {
+  float: right;
+  width: 60%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+@media screen and (max-width: 735px) {
+  #frame .content {
+    width: calc(100% - 58px);
+    min-width: 300px !important;
+  }
+}
+@media screen and (min-width: 900px) {
+  #frame .content {
+    width: calc(100% - 340px);
+  }
+}
+#frame .content .contact-profile {
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  background: #f5f5f5;
+}
+#frame .content .contact-profile img {
+  width: 40px;
+  border-radius: 50%;
+  float: left;
+  margin: 9px 12px 0 9px;
+}
+#frame .content .contact-profile p {
+  float: left;
+}
+#frame .content .contact-profile .social-media {
+  float: right;
+}
+#frame .content .contact-profile .social-media i {
+  margin-left: 14px;
+  cursor: pointer;
+}
+#frame .content .contact-profile .social-media i:nth-last-child(1) {
+  margin-right: 20px;
+}
+#frame .content .contact-profile .social-media i:hover {
+  color: #435f7a;
+}
+#frame .content .messages {
+  height: auto;
+  min-height: calc(100% - 93px);
+  max-height: calc(100% - 93px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+@media screen and (max-width: 735px) {
+  #frame .content .messages {
+    max-height: calc(100% - 105px);
+  }
+}
+#frame .content .messages::-webkit-scrollbar {
+  width: 8px;
+  background: transparent;
+}
+#frame .content .messages::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+#frame .content .messages ul li {
+  display: inline-block;
+  clear: both;
+  float: left;
+  margin: 15px 15px 5px 15px;
+  width: calc(100% - 25px);
+  font-size: 0.9em;
+}
+#frame .content .messages ul li:nth-last-child(1) {
+  margin-bottom: 20px;
+}
+#frame .content .messages ul li.sent img {
+  margin: 6px 8px 0 0;
+}
+#frame .content .messages ul li.sent p {
+  background: #435f7a;
+  color: #f5f5f5;
+}
+#frame .content .messages ul li.replies img {
+  float: right;
+  margin: 6px 0 0 8px;
+}
+#frame .content .messages ul li.replies p {
+  background: #f5f5f5;
+  float: right;
+}
+#frame .content .messages ul li img {
+  width: 22px;
+  border-radius: 50%;
+  float: left;
+}
+#frame .content .messages ul li p {
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 20px;
+  max-width: 205px;
+  line-height: 130%;
+}
+@media screen and (min-width: 735px) {
+  #frame .content .messages ul li p {
+    max-width: 300px;
+  }
+}
+#frame .content .message-input {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 99;
+}
+#frame .content .message-input .wrap {
+  position: relative;
+}
+#frame .content .message-input .wrap input {
+  font-family: "proxima-nova",  "Source Sans Pro", sans-serif;
+  float: left;
+  border: none;
+  width: calc(100% - 90px);
+  padding: 11px 32px 10px 8px;
+  font-size: 0.8em;
+  color: #32465a;
+}
+@media screen and (max-width: 735px) {
+  #frame .content .message-input .wrap input {
+    padding: 15px 32px 16px 8px;
+  }
+}
+#frame .content .message-input .wrap input:focus {
+  outline: none;
+}
+#frame .content .message-input .wrap .attachment {
+  position: absolute;
+  right: 60px;
+  z-index: 4;
+  margin-top: 10px;
+  font-size: 1.1em;
+  color: #435f7a;
+  opacity: .5;
+  cursor: pointer;
+}
+@media screen and (max-width: 735px) {
+  #frame .content .message-input .wrap .attachment {
+    margin-top: 17px;
+    right: 65px;
+  }
+}
+#frame .content .message-input .wrap .attachment:hover {
+  opacity: 1;
+}
+#frame .content .message-input .wrap button {
+  float: right;
+  border: none;
+  width: 50px;
+  padding: 12px 0;
+  cursor: pointer;
+  background: #32465a;
+  color: #f5f5f5;
+}
+@media screen and (max-width: 735px) {
+  #frame .content .message-input .wrap button {
+    padding: 16px 0;
+  }
+}
+#frame .content .message-input .wrap button:hover {
+  background: #435f7a;
+}
+#frame .content .message-input .wrap button:focus {
+  outline: none;
+}
+</style>
+<title>Product Labs</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+     
+  <link rel="stylesheet" href="stylesheets/album.css">
+</head><body>
+  
+<!-- 
+
+A concept for a chat interface. 
+
+Try writing a new message! :)
+
+
+Follow me here:
+Twitter: https://twitter.com/thatguyemil
+Codepen: https://codepen.io/emilcarlsson/
+Website: http://emilcarlsson.se/
+
+-->
+
+<div id="frame">
+	<div id="sidepanel">
+		<div id="profile">
+			<div class="wrap">
+				<img id="profile-img" src="https://media.licdn.com/dms/image/C5103AQHW0Ot209sf_g/profile-displayphoto-shrink_200_200/0?e=1558569600&v=beta&t=lLtBD4omtRaAmGAiyRi4wFdyPKpBGC-Hm2jnLoOBUpc" class="online" alt="" />
+				<p>Shivam Tripathi</p>
+				<i class="fa fa-chevron-down expand-button" aria-hidden="true"></i>
+				<div id="status-options">
+					<ul>
+						<li id="status-online" class="active"><span class="status-circle"></span> <p>Online</p></li>
+						<li id="status-away"><span class="status-circle"></span> <p>Away</p></li>
+						<li id="status-busy"><span class="status-circle"></span> <p>Busy</p></li>
+						<li id="status-offline"><span class="status-circle"></span> <p>Offline</p></li>
+					</ul>
+				</div>
+				<div id="expanded">
+					<label for="twitter"><i class="fa fa-facebook fa-fw" aria-hidden="true"></i></label>
+					<input name="twitter" type="text" value="mikeross" />
+					<label for="twitter"><i class="fa fa-twitter fa-fw" aria-hidden="true"></i></label>
+					<input name="twitter" type="text" value="ross81" />
+					<label for="twitter"><i class="fa fa-instagram fa-fw" aria-hidden="true"></i></label>
+					<input name="twitter" type="text" value="mike.ross" />
+				</div>
+			</div>
+		</div>
+		<div id="search">
+			<label for=""><i class="fa fa-search" aria-hidden="true"></i></label>
+			<input type="text" placeholder="Search contacts..." />
+		</div>
+		<div id="contacts">
+			<ul>
+				<li class="contact">
+					<div class="wrap">
+						<span class="contact-status online"></span>
+						<img src="http://emilcarlsson.se/assets/louislitt.png" alt="" />
+						<div class="meta">
+							<p class="name">Rahul</p>
+							<p class="preview">You just got LITT up, Shivam.</p>
+						</div>
+					</div>
+				</li>
+				<li class="contact active">
+					<div class="wrap">
+						<span class="contact-status busy"></span>
+						<img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
+						<div class="meta">
+							<p class="name">Pritam Krishna</p>
+							<p class="preview">Wrong. You take the gun, or you pull out a bigger one. Or, you call their bluff. Or, you do any one of a hundred and forty six other things.</p>
+						</div>
+					</div>
+				</li>
+				<li class="contact">
+					<div class="wrap">
+						<span class="contact-status away"></span>
+						<img src="http://emilcarlsson.se/assets/rachelzane.png" alt="" />
+						<div class="meta">
+							<p class="name">Arpit</p>
+							<p class="preview">I was thinking that we could have chicken tonight, sounds good?</p>
+						</div>
+					</div>
+				</li>
+				<li class="contact">
+					<div class="wrap">
+						<span class="contact-status online"></span>
+						<img src="http://emilcarlsson.se/assets/donnapaulsen.png" alt="" />
+						<div class="meta">
+							<p class="name">Donna Paulsen</p>
+							<p class="preview">Mike, I know everything! I'm Donna..</p>
+						</div>
+					</div>
+				</li>
+				<li class="contact">
+					<div class="wrap">
+						<span class="contact-status busy"></span>
+						<img src="http://emilcarlsson.se/assets/jessicapearson.png" alt="" />
+						<div class="meta">
+							<p class="name">Jessica Pearson</p>
+							<p class="preview">Have you finished the draft on the Hinsenburg deal?</p>
+						</div>
+					</div>
+				</li>
+				<li class="contact">
+					<div class="wrap">
+						<span class="contact-status"></span>
+						<img src="http://emilcarlsson.se/assets/haroldgunderson.png" alt="" />
+						<div class="meta">
+							<p class="name">Harold Gunderson</p>
+							<p class="preview">Thanks Mike! :)</p>
+						</div>
+					</div>
+				</li>
+				<li class="contact">
+					<div class="wrap">
+						<span class="contact-status"></span>
+						<img src="http://emilcarlsson.se/assets/danielhardman.png" alt="" />
+						<div class="meta">
+							<p class="name">Daniel Hardman</p>
+							<p class="preview">We'll meet again, Mike. Tell Jessica I said 'Hi'.</p>
+						</div>
+					</div>
+				</li>
+				<li class="contact">
+					<div class="wrap">
+						<span class="contact-status busy"></span>
+						<img src="http://emilcarlsson.se/assets/katrinabennett.png" alt="" />
+						<div class="meta">
+							<p class="name">Katrina Bennett</p>
+							<p class="preview">I've sent you the files for the Garrett trial.</p>
+						</div>
+					</div>
+				</li>
+				<li class="contact">
+					<div class="wrap">
+						<span class="contact-status"></span>
+						<img src="http://emilcarlsson.se/assets/charlesforstman.png" alt="" />
+						<div class="meta">
+							<p class="name">Charles Forstman</p>
+							<p class="preview">Mike, this isn't over.</p>
+						</div>
+					</div>
+				</li>
+				<li class="contact">
+					<div class="wrap">
+						<span class="contact-status"></span>
+						<img src="http://emilcarlsson.se/assets/jonathansidwell.png" alt="" />
+						<div class="meta">
+							<p class="name">Jonathan Sidwell</p>
+							<p class="preview"><span>You:</span> That's bullshit. This deal is solid.</p>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div id="bottom-bar">
+		  <form method="GET" action="/">
+                      
+                          <button id="addcontact"><font color="red" size="3">Back to Lab</font></button>
+                      </form>
+                      <form method="GET" action="http://feedback.herokuapp.com">
+                      
+                          <button id="addcontact"><font color="red" size="3">Feedback</font></button>
+                      </form>
+			
+		</div>
+	</div>
+	<div class="content">
+		<div class="contact-profile">
+			<img src="data:image/jpeg;base64,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" alt="" />
+			<p>Vivek Singh</p>
+			<div class="social-media">
+				<i class="fa fa-facebook" aria-hidden="true"></i>
+				<i class="fa fa-twitter" aria-hidden="true"></i>
+				 <i class="fa fa-instagram" aria-hidden="true"></i>
+			</div>
+		</div>
+		<div class="messages">
+			<ul>
+				<li class="sent">
+					<img src="http://emilcarlsson.se/assets/mikeross.png" alt="" />
+					<p>How the hell am I supposed to get a jury to believe you when I am not even sure that I do?!</p>
+				</li>
+				<li class="replies">
+					<img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
+					<p>When you're backed against the wall, break the god damn thing down.</p>
+				</li>
+				<li class="replies">
+					<img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
+					<p>Excuses don't win championships.</p>
+				</li>
+				<li class="sent">
+					<img src="http://emilcarlsson.se/assets/mikeross.png" alt="" />
+					<p>Oh yeah, did Michael Jordan tell you that?</p>
+				</li>
+				<li class="replies">
+					<img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
+					<p>No, I told him that.</p>
+				</li>
+				<li class="replies">
+					<img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
+					<p>What are your choices when someone puts a gun to your head?</p>
+				</li>
+				<li class="sent">
+					<img src="http://emilcarlsson.se/assets/mikeross.png" alt="" />
+					<p>What are you talking about? You do what they say or they shoot you.</p>
+				</li>
+				<li class="replies">
+					<img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
+					<p>Wrong. You take the gun, or you pull out a bigger one. Or, you call their bluff. Or, you do any one of a hundred and forty six other things.</p>
+				</li>
+			</ul>
+		</div>
+		<div class="message-input">
+			<div class="wrap">
+			<input type="text" placeholder="Write your message..." />
+			<i class="fa fa-paperclip attachment" aria-hidden="true"></i>
+			<button class="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+			</div>
+		</div>
+	</div>
+</div>
+<script src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script><script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script >$(".messages").animate({ scrollTop: $(document).height() }, "fast");
+
+$("#profile-img").click(function() {
+	$("#status-options").toggleClass("active");
+});
+
+$(".expand-button").click(function() {
+  $("#profile").toggleClass("expanded");
+	$("#contacts").toggleClass("expanded");
+});
+
+$("#status-options ul li").click(function() {
+	$("#profile-img").removeClass();
+	$("#status-online").removeClass("active");
+	$("#status-away").removeClass("active");
+	$("#status-busy").removeClass("active");
+	$("#status-offline").removeClass("active");
+	$(this).addClass("active");
+	
+	if($("#status-online").hasClass("active")) {
+		$("#profile-img").addClass("online");
+	} else if ($("#status-away").hasClass("active")) {
+		$("#profile-img").addClass("away");
+	} else if ($("#status-busy").hasClass("active")) {
+		$("#profile-img").addClass("busy");
+	} else if ($("#status-offline").hasClass("active")) {
+		$("#profile-img").addClass("offline");
+	} else {
+		$("#profile-img").removeClass();
+	};
+	
+	$("#status-options").removeClass("active");
+});
+
+function newMessage() {
+	message = $(".message-input input").val();
+	if($.trim(message) == '') {
+		return false;
+	}
+	$('<li class="sent"><img src="http://emilcarlsson.se/assets/mikeross.png" alt="" /><p>' + message + '</p></li>').appendTo($('.messages ul'));
+	$('.message-input input').val(null);
+	$('.contact.active .preview').html('<span>You: </span>' + message);
+	$(".messages").animate({ scrollTop: $(document).height() }, "fast");
+};
+
+$('.submit').click(function() {
+  newMessage();
+});
+
+$(window).on('keydown', function(e) {
+  if (e.which == 13) {
+    newMessage();
+    return false;
+  }
+});
+//# sourceURL=pen.js
+</script>
+</body></html>

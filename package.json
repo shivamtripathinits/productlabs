@@ -1,0 +1,25 @@
+{
+  "name": "mongo_uploads",
+  "version": "1.0.0",
+  "description": "Simple app to upload files to MongoDB",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "gridfs-stream": "^1.1.1",
+    "method-override": "^2.3.10",
+    "mongoose": "^5.4.19",
+    "multer": "^1.4.1",
+    "multer-gridfs-storage": "^3.2.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.1"
+  }
+}
